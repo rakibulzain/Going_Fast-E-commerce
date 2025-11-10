@@ -4,8 +4,8 @@ import Card from "./Card";
 export default function Feature() {
   return (
     <div className='bg-[#e8ebe2] border border-b-black'>
-        <div className="gap-5 flex flex-col">
-            <h1 className='text-black flex justify-center items-center text-3xl mt-5  underline decoration-black decoration-2 underline-offset-4'>Feature Products</h1>     
+        <div className="flex justify-center items-center mt-5 ">
+            <h1 className="text-3xl text-black font-semibold underline underline-offset-8 ">Frature <span className="text-blue-500">Products</span></h1>     
         </div>
 
 

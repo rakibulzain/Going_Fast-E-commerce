@@ -13,8 +13,8 @@ export default function Card({ title, price, model,image,mainprice }) {
           
         </div>
         <div className="flex gap-4 mt-4 justify-center items-center">
-          <button className="btn bg-blue-700 hover:bg-black duration-300 px-5">Buy Now</button>
-          <button className="btn bg-blue-700 hover:bg-black duration-300">Add to cart</button>
+          <button className=" bg-blue-700 px-2 p-1 rounded hover:bg-black duration-300 ">Buy Now</button>
+          <button className=" bg-blue-700 p-1 rounded px-1 hover:bg-black duration-300">Add to cart</button>
         </div>
       </div>
     </div>
