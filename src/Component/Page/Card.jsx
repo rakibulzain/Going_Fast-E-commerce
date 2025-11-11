@@ -1,18 +1,19 @@
 import React from "react";
 
-export default function Card({ name, price, brand, imageURL }) {
+export default function Card({ name, price, brand, imageURL, discount }) {
   return (
     <div className="bg-white text-black w-full shadow-lg rounded-lg p-6">
-      <div className="bg-gray-400 shadow-lg rounded-lg overflow-hidden">
+      <div className="bg-gray-400 shadow-lg rounded-lg overflow-hidden relative">
         <img className="w-full h-60 object-cover" src={imageURL} alt={imageURL} />
+        <p className="absolute  top-1  bg-black text-white rounded px-2 text-sm">Discount ${discount}</p>
       </div>
       <div className="mt-5">
         <h2 className="text-xl font-bold">{name}</h2>
         <p className="text-gray-700">{brand}</p>
-        <p className="font-bold text-xl mt-2">
-          $ {price}
-         
-        </p>
+        <p className="font-bold text-xl mt-2"> $ {price}</p>
+       
+        
+   
       </div>
       <div className="flex gap-4 mt-4 justify-center text-white">
         <button className="bg-blue-700 px-4 py-2 rounded hover:bg-black duration-300">

@@ -5,10 +5,10 @@ export default function Feature() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("/shoesdata.json") // public folder থেকে JSON load
+    fetch("/shoesdata.json") 
       .then((res) => res.json())
       .then((data) => {
-        const productsArray = Object.values(data); // object → array
+        const productsArray = Object.values(data); 
         setProducts(productsArray);
       })
       .catch((err) => console.log(err));
@@ -24,7 +24,7 @@ export default function Feature() {
         </div>
 
 
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 mt-10 ">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 mt-10 ">
           {products.map((product) => {
             return (
               <Card
@@ -33,7 +33,9 @@ export default function Feature() {
                 brand={product.brand}
                 price={product.price}
                 mainprice={product.mainprice}
-                imageURL={product.imageURL} />
+                imageURL={product.imageURL}
+                discount={product.discount}
+                />
             );
           })}
         </div>
