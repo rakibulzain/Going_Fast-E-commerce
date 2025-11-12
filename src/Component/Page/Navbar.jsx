@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router";
 
 export default function Navbar() {
 
@@ -26,10 +27,10 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className='hidden lg:flex'>
             <ul className='flex gap-5 text-xl'>
-              <li>Home</li>
-              <li>Categories</li>
-              <li>Cart Item</li>
-              <li>Contact</li>
+              <Link to='/'>Home</Link>
+              <Link to="categories">Categories</Link>
+              <Link>Cart Item</Link>
+              <Link to="contact">Contact</Link>
             </ul>
           </div>
 
