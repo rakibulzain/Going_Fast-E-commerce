@@ -3,6 +3,7 @@ import { IoIosSearch } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router";
+import Contact from "./Contact";
 
 export default function Navbar() {
 
@@ -14,7 +15,7 @@ export default function Navbar() {
 
         <nav className="flex justify-evenly items-center text-black shadow-md">
           <div className="flex justify-between items-center ">
-            <img className='w-30' src="src/assets/logo.jpg" alt="" />
+            <img className='w-30' src="src/assets/logofornav.png" alt="" />
           </div>
 
           <div className='px-5 py-2 flex justify-end items-center border border-black/30 rounded-lg'>

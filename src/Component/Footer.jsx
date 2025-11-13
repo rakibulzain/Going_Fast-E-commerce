@@ -10,7 +10,7 @@ export default function Footer() {
             <div className='flex justify-around items-start  text-white p-10 gap-5'>
                 <div className=''>
                     <div>
-                        <img className='w-10 mb-3' src="src/assets/logo.jpg" alt="logo" />
+                        <img className='w-20 mb-3' src="src/assets/logofornav.png" alt="logo" />
                     </div>
                     <p>Post office Road,Gulshan-1,Dhaka 1200</p>
                     <p className='mb-5'>Bangladesh</p>
