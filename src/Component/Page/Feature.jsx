@@ -35,6 +35,7 @@ export default function Feature() {
                 mainprice={product.mainprice}
                 imageURL={product.imageURL}
                 discount={product.discount}
+                gender={product.gender}
                 />
             );
           })}
