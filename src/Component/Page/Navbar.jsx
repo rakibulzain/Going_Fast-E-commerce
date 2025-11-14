@@ -8,7 +8,26 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const categories = ["All", "Mens Shoes", "Women Shoes", "Kids Shoes"];
+  // const categories = ["All", "Mens Shoes", "Women Shoes", "Kids Shoes"];
+  const categories = [
+    {
+      name: "All",
+      path: "/all"
+    },
+    {
+      name: "Mens Shoes",
+      path: "/mens-shoes"
+    },
+    {
+      name: "Women Shoes",
+      path: "/women-shoes"
+    },
+ 
+    {
+      name: "Kids Shoes",
+      path: "/kids-shoes"
+    }
+  ];
 
   return (
     <div>
@@ -38,7 +57,7 @@ export default function Navbar() {
             <ul className="flex gap-5 text-xl items-center">
               <Link to="/">Home</Link>
 
-              {/* Drawer Toggle Button */}
+              {/* Drawer Toggle */}
               <Link
                 onClick={() => setIsOpen(!isOpen)}>Categories</Link>
 
@@ -49,13 +68,13 @@ export default function Navbar() {
             {/* Drawer */}
             {isOpen && (
               <ul className="absolute left-0 top-full mt-2 bg-white shadow-lg rounded-md w-48 flex flex-col z-50">
-                {categories.map((cat, index) => (
-                  <li
+                {categories.map((item, index) => (
+                  <Link to={item.path}
                     key={index}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   >
-                    {cat}
-                  </li>
+                    {item.name}
+                  </Link>
                 ))}
               </ul>
             )}
