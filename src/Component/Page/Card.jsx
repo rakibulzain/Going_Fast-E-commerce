@@ -1,20 +1,22 @@
-import React from "react";
-import { PiCalendarSlash } from "react-icons/pi";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
-export default function Card({ name, price, brand, imageURL, discount,gender }) {
+export default function Card({id, name, price, brand, imageURL, discount,gender }) {
   return (
+ 
+ <Link to={`/product/${id}`}>
       <div className="bg-white text-black w-full shadow-lg rounded-lg p-6">
         <div className="bg-gray-400 shadow-lg rounded-lg overflow-hidden relative">
           <img className="w-full h-60 object-cover" src={imageURL} alt={imageURL} />
-          <p className="absolute  top-1  bg-red-700 text-white rounded px-2 text-sm">Discount ${discount}</p>
+          <p className="absolute  top-1  bg-red-700 text-white rounded px-2 text-sm">Discount $ {discount}</p>
         </div>
         <div className="mt-5">
           <h2 className="text-xl font-bold ">{name}</h2>
           <p className="text-black mb-2">{brand}</p>
-          <p className="text-gray-700 text-sm"> {gender} </p>
-          <p className="font-bold text-xl mt-2"> $ {price}</p>
+          <div className="flex justify-between items-center">
+            <p className="font-bold text-xl mt-2"> $ {price}</p>
+            <p className="text-gray-700 text-sm"> {gender} </p>
 
+          </div>
 
 
         </div>
@@ -28,6 +30,8 @@ export default function Card({ name, price, brand, imageURL, discount,gender }) 
           </button>
         </div>
       </div>
+     
+     </Link>
 
   );
 }

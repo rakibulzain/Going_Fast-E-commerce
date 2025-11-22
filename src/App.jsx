@@ -7,6 +7,9 @@ import Contact from './Component/Page/Contact.jsx'
 import Feature from './Component/Page/Feature.jsx'
 import MensShoes from './Component/Page/MensShoes.jsx'
 import WomenShoes from './Component/Page/WomenShoes.jsx'
+import KidsShoes from './Component/Page/KidsShoes.jsx'
+import ProductDetails from './Component/Page/ProductDetails.jsx'
+
 
 
 
@@ -21,7 +24,9 @@ export default function App() {
         <Route path='/all' element={<Feature/>}/>
         <Route path='/mens-shoes' element={<MensShoes/>}/>
         <Route path='/women-shoes' element={<WomenShoes/>}/>
-        <Route path='/kids-shoes' element={<h1>kids shoes</h1>}/>
+        <Route path='/kids-shoes' element={<KidsShoes/>}/>
+        <Route path='/product/:id' element={<ProductDetails/>}/>
+
         
       </Routes>
       <Footer />

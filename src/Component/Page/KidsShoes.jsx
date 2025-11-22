@@ -17,7 +17,7 @@ export default function KidsShoes() {
     return (
         <div className='bg-[#e8ebe2] border border-b-black'>
             <div className="flex justify-center items-center mt-5 ">
-                <h1 className="text-3xl text-black font-semibold underline underline-offset-8 ">Kidssr Shoes <span className="text-blue-500">Products</span></h1>
+                <h1 className="text-3xl text-black font-semibold underline underline-offset-8 ">Kids Shoes <span className="text-blue-500">Products</span></h1>
             </div>
 
 
