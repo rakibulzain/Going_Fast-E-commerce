@@ -9,6 +9,8 @@ import MensShoes from './Component/Page/MensShoes.jsx'
 import WomenShoes from './Component/Page/WomenShoes.jsx'
 import KidsShoes from './Component/Page/KidsShoes.jsx'
 import ProductDetails from './Component/Page/ProductDetails.jsx'
+import SearchProduct from './Component/Page/SearchProduct.jsx'
+import { Toaster } from 'react-hot-toast'
 
 
 
@@ -17,6 +19,7 @@ export default function App() {
   return (
 
     <Router>
+      <Toaster/>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -26,6 +29,7 @@ export default function App() {
         <Route path='/women-shoes' element={<WomenShoes/>}/>
         <Route path='/kids-shoes' element={<KidsShoes/>}/>
         <Route path='/product/:id' element={<ProductDetails/>}/>
+        <Route path="/search" element={<SearchProduct />} />
 
         
       </Routes>

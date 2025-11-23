@@ -29,6 +29,7 @@ export default function Feature() {
             return (
               <Card
                 key={product.id}
+                id={product.id}
                 name={product.name}
                 brand={product.brand}
                 price={product.price}
